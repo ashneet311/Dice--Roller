@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading Animation */
+.game-title {
+  font-size: 2.5rem;
+  color: #4facfe;
+  font-weight: bold;
+}
+
+/* Input Field */
+.input {
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid #4facfe;
+  outline: none;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.input:focus {
+  transform: scale(1.1);
+}
+
+/* Buttons */
+.button {
+  padding: 14px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Dice Container */
+.dice-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dice {
+  width: 120px;
+}
+
+.rolling .dice {
+  animation: rollDice 0.5s infinite linear;
+}
+
+/* Rules Modal */
+.rules-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rules-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rollDice {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s ease;
+}
+
+.animate-scale-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite ease-in-out;
+}
